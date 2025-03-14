@@ -35,3 +35,6 @@ def logout_user(request):
     logout(request)
     return redirect('account:login')
 
+def user_profile(request):
+    user = request.user
+    return render(request, 'registration/profile.html', {'user': user})
